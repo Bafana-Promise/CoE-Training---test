@@ -1,0 +1,71 @@
+<!-- <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="100"> -->
+<!-- <mat-toolbar>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+      <div fxLayout="row" fxLayoutAlign="start stretch" fxlayoutGap="12px">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="margin-left">Hi {{name}}</span>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start stretch">
+        <button mat-icon-button class="example-icon favorite-icon magin-right"
+          aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-toolbar> -->
+
+<!-- <div class="margin-top" fxLayout="column" fxLayoutAlign="start stretch" fxlayoutGap="30px">
+    <div fxLayout="row" fxLayoutAlign="start stretch" *ngFor="let user of users" fxlayoutGap="12px">
+      <div class="list-margin">
+        <b>Name :</b> {{user.name}}
+      </div>
+      <div class="display-none list-margin">
+        <b>Surname : </b> {{user.surname}}
+      </div>
+      <div class="display-none list-margin">
+        <b>Email : </b> {{user.email}}
+      </div>
+      <div class="display-none list-margin">
+        <b>Town : </b> {{user.town}}
+      </div>
+      <div class="display-none list-margin">
+        <b>Suburb : </b> {{user.suburb}}
+      </div>
+      <div class="display-none list-margin">
+        <b>Street : </b> {{user.street}}
+      </div>
+      <div class="display-none list-margin">
+        <b>Code : </b> {{user.code}}
+      </div>
+    </div>
+
+
+  </div> -->
+<div fxLayout="row" fxLayoutAlign="space-between center" fxFill>
+  <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100">
+
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+      <div *ngFor="let label of additionalDetailsData; let i = index">
+        <div class="full-width" fxLayout="column" fxLayoutAlign="start stretch" fxShow="true" *ngIf="label.inputType == 'input'"
+          ngClass="{{lastElement == label ? 'width22 ' : 'width44'}}">
+          <p class="textCenter">{{label.display}} </p>
+          <mat-form-field appearance="fill">
+            <mat-label>{{label.display}}</mat-label>
+            <input class="full-width" matInput name="triggerSource" placeholder="{{label.displayQuestionText}}"
+              [value]="" readonly="readonly">
+          </mat-form-field>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+<!-- </div> -->
